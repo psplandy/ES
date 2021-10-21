@@ -338,6 +338,9 @@ void ScreenScraperRequest::processList(const pugi::xml_document& xmldoc, std::ve
 		std::string path = ssConfig.getGameSearchUrl(name) + "&systemeid=" + platformId + "&gameid=" + id;
 
 		mRequestQueue->push(std::unique_ptr<ScraperRequest>(new ScreenScraperRequest(results, path)));
+		
+		
+		std::cout << "--> URL point to: " << path;
 
 		game = game.next_sibling("jeu");
 	}
