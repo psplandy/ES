@@ -324,7 +324,7 @@ void ScreenScraperRequest::processList(const pugi::xml_document& xmldoc, std::ve
 	pugi::xml_node game = data.child("jeu");
 
 	if (!game)
-		LOG(LogDebug) << "Found nothing";
+		LOG(LogDebug) << "Found nothing" << "--> URL point to: " << path;
 
 	ScreenScraperRequest::ScreenScraperConfig ssConfig;
 
