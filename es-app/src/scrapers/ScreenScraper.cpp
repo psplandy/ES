@@ -179,7 +179,7 @@ void ScreenScraperRequest::process(const std::unique_ptr<HttpReq>& req, std::vec
 	if (!parseResult)
 	{
 		std::stringstream ss;
-		ss << "ScreenScraperRequest - Error parsing XML." << std::endl << parseResult.description() << "";
+		ss << "ScreenScraperRequest - Error parsing XML." << std::endl << parseResult.description() << "" << "--> URL point to: " << path;;
 
 		std::string err = ss.str();
 		setError(err);
