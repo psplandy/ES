@@ -340,7 +340,7 @@ void ScreenScraperRequest::processList(const pugi::xml_document& xmldoc, std::ve
 		mRequestQueue->push(std::unique_ptr<ScraperRequest>(new ScreenScraperRequest(results, path)));
 		
 		
-		std::cout << "--> URL point to: " << path;
+		LOG(LogDebug)  << "--> URL point to: " << path;
 
 		game = game.next_sibling("jeu");
 	}
